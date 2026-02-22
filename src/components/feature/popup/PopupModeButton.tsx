@@ -20,7 +20,7 @@ export default function PopupModeButton({ className }: Props) {
     });
 
     const width = 414;
-    const height = 896;
+    const height = 750;
 
     // 중앙 배치 계산
     const left = window.screen.width / 2 - width / 2;
