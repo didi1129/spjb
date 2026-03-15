@@ -1,0 +1,22 @@
+name: Sync from upstream
+
+  on:
+    repository_dispatch:
+      types: [sync-from-upstream]
+    workflow_dispatch:
+
+  jobs:
+    sync:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
+            token: ${{ secrets.GITHUB_TOKEN }}
+
+        - name: Sync from upstream
+          run: |
+            git remote add upstream https://github.com/asksa1256/spjb.git
+            git fetch upstream
+            git reset --hard upstream/main
+            git push origin main --force
