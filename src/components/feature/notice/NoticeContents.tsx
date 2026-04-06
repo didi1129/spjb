@@ -4,7 +4,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import { TriangleAlert } from "lucide-react";
+import { TriangleAlert, Download } from "lucide-react";
 import GuildBtnImg from "@/assets/images/guild-btn.png";
 import GuildFormImg from "@/assets/images/guild-form.png";
 import GuildModalImg from "@/assets/images/guilds-modal.png";
@@ -20,6 +20,45 @@ import { AppWindow } from "lucide-react";
 const NoticeContents = () => {
   return (
     <Accordion type="single" collapsible className="w-full">
+      <AccordionItem value="feat-csv-download">
+        <AccordionTrigger className="text-base font-medium text-foreground">
+          "족보 다운로드" 업데이트 (2026.04.06.)
+        </AccordionTrigger>
+        <AccordionContent className="mb-4 text-sm text-foreground bg-secondary p-4 rounded-md">
+          <p className="mb-4">
+            심플족보에 등록된 족보를 CSV 파일로 다운로드하실 수 있습니다.
+            <br/>
+            해당 파일로 <b>오프라인에서도 퀴즈별 문제와 답 검색</b>이 가능합니다.
+            <br/>
+            <span className="text-gray-500 text-xs leading-none">* 오프라인 데이터는 다운로드 시점 이후로 새 데이터가 반영되지 않습니다. 최신 퀴즈 데이터를 받으시려면 심플족보 접속 후 새 파일을 다운로드해주세요.</span>
+          </p>
+
+          <hr className="mb-4" />
+
+          <section className="mb-6 flex flex-col gap-2">
+            <h4 className="font-bold">족보 다운로드 방법</h4>
+            <p>
+              화면 좌측 하단의 다운로드 아이콘(<Download className="size-4 inline-block align-text-bottom" />)을 클릭하면
+              4개 퀴즈 카테고리(OX, 꽁꽁, 꼬로록, 가로세로)의 전체 문제와 답을
+              하나의 <b>ZIP 파일</b>로 다운로드할 수 있습니다.
+            </p>
+            <p>
+              ZIP 파일 안에는 카테고리별 CSV 파일이 포함되어 있습니다.
+            </p>
+            <ul className="list-disc list-inside text-foreground/70 flex flex-col gap-1">
+              <li>quiz_ox.csv</li>
+              <li>quiz_kkong.csv</li>
+              <li>quiz_kkororok.csv</li>
+              <li>quiz_garo.csv</li>
+            </ul>
+          </section>
+
+          <hr />
+
+          <p className="mt-6 text-sm">감사합니다.</p>
+        </AccordionContent>
+      </AccordionItem>
+
       <AccordionItem value="feat-cherry-blossom">
         <AccordionTrigger className="text-base font-medium text-foreground">
           "벚꽃 이펙트" 업데이트 (2026.03.27.)

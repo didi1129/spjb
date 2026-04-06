@@ -35,8 +35,9 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-background fixed left-0 top-0 w-full shadow-sm z-10 py-2 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
-        }`}
+      className={`bg-background fixed left-0 top-0 w-full shadow-sm z-10 py-2 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
     >
       <div className="lg:max-w-4xl w-full lg:px-0 lg:mx-auto md:px-5 px-4 flex justify-between items-center">
         <h1 className="font-bold text-xl tracking-tight text-foreground">

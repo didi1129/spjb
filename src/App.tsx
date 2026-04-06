@@ -21,6 +21,9 @@ const UserQuestionsViewModal = lazy(
   () =>
     import("./components/feature/user-questions-view/UserQuestionsViewModal"),
 );
+const DownloadCsvButton = lazy(
+  () => import("./components/feature/export/DownloadCsvButton"),
+);
 const AnnouncementModal = lazy(
   () => import("./components/feature/notice/AnnouncementModal"),
 );
@@ -131,6 +134,11 @@ export default function App() {
       {/* 유저 출제 문제 */}
       <Suspense fallback={null}>
         <UserQuestionsViewModal />
+      </Suspense>
+
+      {/* 족보 다운로드 */}
+      <Suspense fallback={null}>
+        <DownloadCsvButton />
       </Suspense>
 
       {/* 임시 공지 */}

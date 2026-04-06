@@ -42,7 +42,7 @@ const UserQuestionsViewModal = () => {
             <Button
               variant="secondary"
               size="icon"
-              className="fixed left-6 bottom-36 p-6 shadow-sm text-foreground bg-background rounded-full"
+              className="fixed left-6 bottom-50 p-6 shadow-sm text-foreground bg-background rounded-full"
               onClick={handleClick}
             >
               <UserPlus className="size-5" />
